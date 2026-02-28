@@ -25,11 +25,6 @@ screen_manager.add("settings",     SettingsScreen(screen_manager))
 screen_manager.switch_to("menu")
 screen_manager.dirty = True
 
-# Temporary test — remove after debugging
-test = Image.new('RGB', (DISPLAY_WIDTH, DISPLAY_HEIGHT), color=(255, 0, 0))
-write_to_display(test)
-time.sleep(5)
-
 while True:
     tap = touch.poll()
     if tap:
