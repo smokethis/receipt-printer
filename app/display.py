@@ -13,5 +13,6 @@ def write_to_display(img):
     b = pixels[2::3].astype(np.uint16)
     rgb565_data = ((b & 0xF8) << 8) | ((g & 0xFC) << 3) | (r >> 3)
     img.save('/tmp/pre_transpose.png')
+    rotated.save('/tmp/post_transpose.png')
     with open('/dev/fb1', 'wb') as fb:
         fb.write(rgb565_data.astype(np.uint16).tobytes())
