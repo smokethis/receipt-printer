@@ -1,17 +1,17 @@
 from app.display import DISPLAY_WIDTH, DISPLAY_HEIGHT
+from app.ui.theme import COLOR_BG
 import logging
 log = logging.getLogger(__name__)
 
 
 class Screen:
-    _BG_COLOR = (0, 0, 0)
+    _BG_COLOR = COLOR_BG
 
     def __init__(self):
         self.components = []
         self.dirty = True
 
     def handle_tap(self, x, y):
-        log.debug(f"handle_tap called with {x}, {y}")
         for component in self.components:
             if component.contains(x, y):
                 component.handle_tap(x, y)

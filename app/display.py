@@ -1,11 +1,12 @@
 import numpy as np
+from PIL import Image
 
 DISPLAY_WIDTH = 480
 DISPLAY_HEIGHT = 320
 
 def write_to_display(img):
     """Rotate and write a landscape PIL image to the portrait framebuffer"""
-    rotated = img.rotate(90, expand=True)
+    rotated = img.transpose(Image.Transpose.ROTATE_90)
     pixels = np.frombuffer(rotated.tobytes(), dtype=np.uint8)
     r = pixels[0::3].astype(np.uint16)
     g = pixels[1::3].astype(np.uint16)
