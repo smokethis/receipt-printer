@@ -58,7 +58,7 @@ def poll():
                 _cur_y = event.value
         elif event.type == ecodes.EV_KEY:
             if event.code == ecodes.BTN_TOUCH and event.value == 0:
-                disp_x = DISPLAY_WIDTH - _map(_cur_y, DISPLAY_WIDTH)
-                disp_y = DISPLAY_HEIGHT - _map(_cur_x, DISPLAY_HEIGHT)
+                disp_x = DISPLAY_WIDTH - 1 - _map(_cur_y, DISPLAY_WIDTH - 1)
+                disp_y = DISPLAY_HEIGHT - 1 - _map(_cur_x, DISPLAY_HEIGHT - 1)
                 tap = (disp_x, disp_y)
     return tap
