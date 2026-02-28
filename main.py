@@ -32,6 +32,7 @@ while True:
         screen_manager.active_screen.handle_tap(tx, ty)
     if screen_manager.dirty:
         screen_manager.active_screen.render(draw)
+        img.save("/tmp/debug_frame.png")  # inspect this on your Mac
         write_to_display(img)
         screen_manager.dirty = False
     time.sleep(0.01)
