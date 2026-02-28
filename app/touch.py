@@ -57,7 +57,7 @@ def poll():
             elif event.code == ecodes.ABS_Y:
                 _cur_y = event.value
         elif event.type == ecodes.EV_KEY:
-            if event.code == ecodes.BTN_TOUCH and event.value == 1:
+            if event.code == ecodes.BTN_TOUCH and event.value == 0:
                 # swapxy=1: device ABS_X → display Y, device ABS_Y → display X
                 disp_x = _map(_cur_y, DISPLAY_WIDTH - 1)
                 disp_y = _map(_cur_x, DISPLAY_HEIGHT - 1)
