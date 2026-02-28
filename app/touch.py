@@ -62,6 +62,5 @@ def poll():
                 disp_x = _map(_cur_y, DISPLAY_WIDTH - 1)
                 disp_y = _map(_cur_x, DISPLAY_HEIGHT - 1)
                 tap = (disp_x, disp_y)
-    tap = (disp_x, disp_y)
-    print(f"Tap at: {tap}")  # temporary debug
+                print(f"Tap at: {tap}")  # temporary debug
     return tap
