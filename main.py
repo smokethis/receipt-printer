@@ -9,6 +9,9 @@ from app.ui.screens.print_food import PrintFoodScreen
 from app.ui.screens.find_recipe import FindRecipeScreen
 from app.ui.screens.ask_question import AskQuestionScreen
 from app.ui.screens.settings import SettingsScreen
+from app.log import setup_logging
+log = setup_logging()
+log.info("Application starting")
 
 img = Image.new('RGB', (DISPLAY_WIDTH, DISPLAY_HEIGHT), color=(0, 0, 0))
 draw = ImageDraw.Draw(img)
