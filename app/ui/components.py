@@ -1,5 +1,5 @@
 from app.ui.theme import (
-    COLOR_BUTTON, COLOR_TEXT, COLOR_STROKE,
+    COLOR_BUTTON, COLOR_TEXT,
     FONT_SIZE_NORMAL, load_font,
 )
 
@@ -41,8 +41,7 @@ class Button(Component):
         text_h = bbox[3] - bbox[1]
         text_x = self.x + (self.width - text_w) // 2
         text_y = self.y + (self.height - text_h) // 2
-        draw.text((text_x, text_y), self.label, font=self._font,
-                  fill=COLOR_TEXT, stroke_width=2, stroke_fill=COLOR_STROKE)
+        draw.text((text_x, text_y), self.label, font=self._font, fill=COLOR_TEXT)
 
 
 class Label(Component):
@@ -52,5 +51,4 @@ class Label(Component):
         self._font = load_font(font_size or FONT_SIZE_NORMAL)
 
     def render(self, draw):
-        draw.text((self.x, self.y), self.text, font=self._font,
-                  fill=COLOR_TEXT, stroke_width=2, stroke_fill=COLOR_STROKE)
+        draw.text((self.x, self.y), self.text, font=self._font, fill=COLOR_TEXT)
