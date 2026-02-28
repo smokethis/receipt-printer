@@ -51,7 +51,7 @@ class Button(Component):
         text_h = bbox[3] - bbox[1]
         text_x = self.x + (self.width - text_w) // 2
         text_y = self.y + (self.height - text_h) // 2
-        draw.text((text_x, text_y), self.label, font=self._font, fill=self._TEXT_COLOR)
+        draw.text((text_x, text_y), self.label, stroke_width=1, stroke_fill=(0,0,0), font=self._font, fill=self._TEXT_COLOR)
 
 
 class Label(Component):
@@ -64,4 +64,4 @@ class Label(Component):
         self._font = _load_font(font_size or self._FONT_SIZE)
 
     def render(self, draw):
-        draw.text((self.x, self.y), self.text, font=self._font, fill=self._TEXT_COLOR)
+        draw.text((self.x, self.y), self.text, stroke_width=1, stroke_fill=(0,0,0), font=self._font, fill=self._TEXT_COLOR)
