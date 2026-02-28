@@ -2,9 +2,9 @@ import os
 from PIL import ImageFont
 
 # ── Palette ──────────────────────────────────────────────────────────────────
-COLOR_BG     = (30,  30,  35)   # screen background
-COLOR_BUTTON = (50, 100, 180)   # button fill
-COLOR_TEXT   = (255, 255, 255)  # primary text
+COLOR_BG     = (15,  15,  18)   # screen background
+COLOR_BUTTON = (30,  60, 110)   # button fill
+COLOR_TEXT   = (180, 180, 180)  # primary text
 
 # ── Font sizes ────────────────────────────────────────────────────────────────
 FONT_SIZE_NORMAL  = 24
