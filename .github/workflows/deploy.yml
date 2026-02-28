@@ -5,9 +5,7 @@ name: Build and run reciept printer
 
 on:
   push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
 
 permissions:
   contents: read
@@ -18,10 +16,14 @@ jobs:
     runs-on: self-hosted
 
     steps:
-    - name: Pull latest code
+    - name: Checkout branch
+      env:
+        BRANCH: ${{ github.head_ref || github.ref_name }}
       run: |
         cd /home/tim/receipt-printer
-        git pull
+        git fetch origin
+        git checkout "$BRANCH"
+        git pull origin "$BRANCH"
 
     - name: Install dependencies
       run: |
