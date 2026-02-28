@@ -1,4 +1,5 @@
 import numpy as np
+from PIL import Image
 
 DISPLAY_WIDTH = 480
 DISPLAY_HEIGHT = 320
