@@ -15,7 +15,7 @@ _FONT_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "assets", "fonts
 
 
 def load_font(size=FONT_SIZE_NORMAL):
-    path = os.path.join(_FONT_DIR, f"ter-u{size}b.bdf")
+    path = os.path.join(_FONT_DIR, f"ter-u{size}b.pil")
     try:
         return ImageFont.load(path)
     except (IOError, OSError):
