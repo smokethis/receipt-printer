@@ -9,6 +9,7 @@ class Screen:
         self.dirty = True
 
     def handle_tap(self, x, y):
+        print(f"handle_tap called with {x}, {y}")
         for component in self.components:
             if component.contains(x, y):
                 component.handle_tap(x, y)
