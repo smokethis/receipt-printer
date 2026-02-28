@@ -28,7 +28,7 @@ class Component:
 
 
 class Button(Component):
-    _BG_COLOR = (55, 163, 194)
+    _BG_COLOR = (22, 145, 138)
     _TEXT_COLOR = (230, 230, 225)
     _FONT_SIZE = 24
 
