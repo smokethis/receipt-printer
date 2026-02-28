@@ -5,9 +5,7 @@ name: Build and run reciept printer
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: "**"
 
 permissions:
   contents: read
