@@ -1,10 +1,11 @@
 from app.display import DISPLAY_WIDTH, DISPLAY_HEIGHT
+from app.ui.theme import COLOR_BG
 import logging
 log = logging.getLogger(__name__)
 
 
 class Screen:
-    _BG_COLOR = (30, 30, 35) # Charcoal grey background to all screens
+    _BG_COLOR = COLOR_BG
 
     def __init__(self):
         self.components = []
