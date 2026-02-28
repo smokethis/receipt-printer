@@ -28,8 +28,8 @@ class Component:
 
 
 class Button(Component):
-    _BG_COLOR = (50, 100, 180)
-    _TEXT_COLOR = (255, 255, 255)
+    _BG_COLOR = (55, 163, 194)
+    _TEXT_COLOR = (230, 230, 225)
     _FONT_SIZE = 24
 
     def __init__(self, x, y, width, height, label, on_tap):
@@ -55,7 +55,7 @@ class Button(Component):
 
 
 class Label(Component):
-    _TEXT_COLOR = (255, 255, 255)
+    _TEXT_COLOR = (230, 230, 225)
     _FONT_SIZE = 24
 
     def __init__(self, x, y, text, font_size=None):
