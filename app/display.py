@@ -110,7 +110,7 @@ class ILI9486:
     def write(self, img):
         """Accept a 480×320 PIL RGB image, rotate to portrait, convert to RGB565, send."""
         # Rotate landscape→portrait: 480×320 becomes 320×480
-        rotated = img.transpose(Image.Transpose.ROTATE_90)
+        rotated = img.transpose(Image.Transpose.ROTATE_270)
         # RGB888 → RGB565, big-endian (MSB first) for the 16-bit shift register
         raw = np.frombuffer(rotated.tobytes(), dtype=np.uint8)
         r = raw[0::3].astype(np.uint16)
