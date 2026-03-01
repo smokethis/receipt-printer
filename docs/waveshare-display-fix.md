@@ -1,4 +1,4 @@
-# Display Investigation: ILI9486 Gradient Rendering
+# Display Investigation: Waveshare 4.0 (A) ILI9486 Gradient Rendering
 
 ## The Problem
 
