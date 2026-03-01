@@ -10,6 +10,7 @@ from app.ui.screens.find_recipe import FindRecipeScreen
 from app.ui.screens.ask_question import AskQuestionScreen
 from app.ui.screens.settings import SettingsScreen
 from app.log import setup_logging
+
 log = setup_logging()
 log.info("Application starting")
 
