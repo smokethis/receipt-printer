@@ -3,3 +3,4 @@ evdev
 numpy
 spidev
 lgpio
+anthropic
